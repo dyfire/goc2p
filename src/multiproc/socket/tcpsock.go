@@ -121,7 +121,7 @@ func handleConn(conn net.Conn) {
 		if err != nil {
 			n, err := write(conn, err.Error())
 			if err != nil {
-				printLog("Write Error (written %d bytes): %s (Server)\n", err)
+				printLog("Write Error (written %d bytes): %s (Server)\n", n, err)
 			}
 			printLog("Sent response (written %d bytes): %s (Server)\n", n, err)
 			continue
